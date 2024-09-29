@@ -60,11 +60,4 @@ export default {
 };
 </script>
 
-<style>
-body {
-  background-color: #141414;
-}
-#app {
-  color: white;
-}
-</style>
+
