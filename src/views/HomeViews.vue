@@ -1,38 +1,43 @@
 <template>
   <div class="home">
+    <ConfettiCanvas />
     <h1>Happy {{ ordinal(elapsedYears) }} Anniversary!</h1>
     <CountdownTimer />
-  </div>
+    <Countdown :deadlineDate="new Date(2025, 7, 11, 0, 0, 0, 0)"/>
+ </div>
 </template>
 
 <script>
 import CountdownTimer from '../components/CountdownTimer.vue';
+import ConfettiCanvas from '../components/ConfettiCanvas.vue';
+import {Countdown} from 'vue3-flip-countdown'
+
+
 
 export default {
   components: {
     CountdownTimer,
+    ConfettiCanvas,
+    Countdown,
   },
   data() {
     return {
       currentDate: new Date(),
-      startDate: new Date('November 7, 2021 00:00:00')
+      startDate: new Date('November 7, 2021 00:00:00'),
     };
   },
   computed: {
     elapsedYears() {
-      // Menghitung perbedaan tahun
       let years = this.currentDate.getFullYear() - this.startDate.getFullYear();
-
-      // Memeriksa jika bulan dan hari belum melewati 7 November pada tahun ini
       if (
-        this.currentDate.getMonth() < this.startDate.getMonth() || 
+        this.currentDate.getMonth() < this.startDate.getMonth() ||
         (this.currentDate.getMonth() === this.startDate.getMonth() && this.currentDate.getDate() < this.startDate.getDate())
       ) {
-        years--; // Kurangi satu jika belum mencapai 7 November tahun ini
+        years--;
       }
-
       return years;
-    }
+    },
+    
   },
   methods: {
     ordinal(num) {
@@ -45,8 +50,17 @@ export default {
       } else {
         return num + (suffixes[mod10] || suffixes[0]);
       }
-    }
-  }
+    },
+    calculateTime(remainingTime) {
+      // remainingTime adalah sisa waktu dalam millisecond
+      const seconds = Math.floor(remainingTime / 1000) % 60;
+      const minutes = Math.floor(remainingTime / (1000 * 60)) % 60;
+      const hours = Math.floor(remainingTime / (1000 * 60 * 60)) % 24;
+      const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+
+      console.log(`Sisa waktu: ${days} hari, ${hours} jam, ${minutes} menit, ${seconds} detik`);
+    },
+  },
 };
 </script>
 

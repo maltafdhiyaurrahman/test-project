@@ -2,10 +2,10 @@
     <nav class="navbar">
       <ul class="navbar-nav d-flex flex-row align-items-center">
         <li class="nav-item">
-          <router-link class="nav-link" to="/"><i class="fas fa-home"></i></router-link>
+          <router-link class="nav-link" to="/" exact-active-class="active"><i class="fas fa-home"></i></router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to="/ourmemory"><i class="fas fa-image"></i></router-link>
+          <router-link class="nav-link" to="/ourmemory" exact-active-class="active"><i class="fas fa-image"></i></router-link>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#services"><i class="fas fa-cog"></i></a>
@@ -25,10 +25,8 @@
     name: 'FloatingNav',
     methods: {
       logout() {
-        // Hapus status login dari localStorage
-      localStorage.removeItem('isLoggedIn');
-      // Arahkan pengguna kembali ke halaman login
-      this.$router.push('/login');
+        localStorage.removeItem('isLoggedIn');
+        this.$router.push('/login');
       }
     }
   };
