@@ -1,21 +1,23 @@
 <template>
     <div id="app">
-      <HeaderViews v-if="isHomeOrLogin" />
-      <router-view />
+      <div class="content">
+        <router-view />
+      </div>
+      <FloatingNav v-if="isHomeOrLogin"/>
     </div>
   </template>
   
   <script>
-  import HeaderViews from './components/HeaderViews.vue';
+  import FloatingNav from './components/FloatingNav.vue';
   
   export default {
     name: 'App',
     components: {
-        HeaderViews,
+        FloatingNav
     },
     computed: {
       isHomeOrLogin() {
-        return this.$route.path === '/' ;
+        return this.$route.path != '/login' ;
       },
     },
   };
@@ -23,5 +25,10 @@
   
   <style>
   /* Tambahkan gaya tambahan jika diperlukan */
+  .content {
+  padding: 20px; /* Jarak di sekitar router-view */
+  margin: 0 auto; /* Memusatkan konten */
+  max-width: 1200px; /* Memastikan konten tidak terlalu lebar */
+}
   </style>
   

@@ -13,6 +13,11 @@
             <li class="nav-item">
               <router-link class="nav-link" to="/login">Login</router-link>
             </li>
+            <li class="nav-item">
+              <button class="btn btn-danger" @click="handleLogout">
+                Logout
+              </button>
+            </li>
           </ul>
         </div>
       </div>
@@ -22,6 +27,14 @@
   <script>
   export default {
     name: 'HeaderViews',
+    methods: {
+    handleLogout() {
+      // Hapus status login dari localStorage
+      localStorage.removeItem('isLoggedIn');
+      // Arahkan pengguna kembali ke halaman login
+      this.$router.push('/login');
+    }
+  }
   };
   </script>
   

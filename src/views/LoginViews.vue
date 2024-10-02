@@ -20,9 +20,6 @@
         <div v-if="generalError" class="alert alert-danger mt-3 text-center">
           {{ generalError }}
         </div>
-        <p class="mt-3 text-center">
-          <a href="#" class="text-decoration-none">Forgot your password?</a>
-        </p>
       </div>
     </div>
   </div>

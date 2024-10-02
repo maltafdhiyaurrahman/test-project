@@ -1,11 +1,17 @@
 import { createRouter, createWebHashHistory } from 'vue-router'; // Ganti dari createWebHistory
 import HomeViews from '../views/HomeViews.vue';
 import LoginViews from '../views/LoginViews.vue';
+import GaleriViews from '@/views/GaleriViews.vue';
 
 const routes = [
   {
     path: '/',
     component: HomeViews,
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/ourmemory',
+    component: GaleriViews,
     meta: { requiresAuth: true },
   },
   {
