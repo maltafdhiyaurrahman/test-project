@@ -2,6 +2,8 @@ import { createRouter, createWebHashHistory } from 'vue-router'; // Ganti dari c
 import HomeViews from '../views/HomeViews.vue';
 import LoginViews from '../views/LoginViews.vue';
 import GaleriViews from '@/views/GaleriViews.vue';
+import QuizViews from '@/views/QuizViews.vue';
+import ThankYouCountdown from '@/views/ThankYouCountdown.vue';
 
 const routes = [
   {
@@ -12,6 +14,16 @@ const routes = [
   {
     path: '/ourmemory',
     component: GaleriViews,
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/quiz',
+    component: QuizViews,
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/anjay',
+    component: ThankYouCountdown,
     meta: { requiresAuth: true },
   },
   {

@@ -25,10 +25,7 @@
   
   <style>
   /* Tambahkan gaya tambahan jika diperlukan */
-  .content {
-  padding: 20px; /* Jarak di sekitar router-view */
-  margin: 0 auto; /* Memusatkan konten */
-  max-width: 1200px; /* Memastikan konten tidak terlalu lebar */
-}
+  
+
   </style>
   

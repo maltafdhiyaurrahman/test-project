@@ -1,24 +1,21 @@
 <template>
-  <div class="home">
-    <ConfettiCanvas />
-    <h1>Happy {{ ordinal(elapsedYears) }} Anniversary!</h1>
-    <CountdownTimer />
-    <Countdown :deadlineDate="new Date(2025, 7, 11, 0, 0, 0, 0)"/>
- </div>
+  <div class="home d-flex justify-content-center align-items-center">
+    <div class="content">
+      <ConfettiCanvas />
+      <h1 class="title">Happy {{ ordinal(elapsedYears) }} Anniversary!</h1>
+      <CountdownTimer />
+    </div>
+  </div>
 </template>
 
 <script>
 import CountdownTimer from '../components/CountdownTimer.vue';
 import ConfettiCanvas from '../components/ConfettiCanvas.vue';
-import {Countdown} from 'vue3-flip-countdown'
-
-
 
 export default {
   components: {
     CountdownTimer,
     ConfettiCanvas,
-    Countdown,
   },
   data() {
     return {
@@ -37,7 +34,6 @@ export default {
       }
       return years;
     },
-    
   },
   methods: {
     ordinal(num) {
@@ -52,7 +48,6 @@ export default {
       }
     },
     calculateTime(remainingTime) {
-      // remainingTime adalah sisa waktu dalam millisecond
       const seconds = Math.floor(remainingTime / 1000) % 60;
       const minutes = Math.floor(remainingTime / (1000 * 60)) % 60;
       const hours = Math.floor(remainingTime / (1000 * 60 * 60)) % 24;
@@ -65,7 +60,30 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .home {
+  display: flex;
+  justify-content: center; /* Menjajarkan konten secara horizontal */
+  align-items: center; /* Menjajarkan konten secara vertikal */
+  height: 100vh; /* Mengatur tinggi elemen agar memenuhi layar */
   text-align: center;
+  font-family: 'Press Start 2P', cursive; /* Menggunakan font retro */
+  color: #e15048; /* Warna teks untuk tampilan retro */
+  background-color: #384B70; /* Warna latar belakang yang lebih retro */
+}
+
+.content {
+  padding: 20px; /* Menambahkan padding untuk memberikan ruang di sekitar konten */
+  border-radius: 10px; /* Radius border untuk tampilan lebih halus */
+  background-color: #384B70; /* Warna latar belakang yang lebih retro */
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Bayangan untuk efek 3D */
+}
+
+.title {
+  font-size: 2.5rem; /* Ukuran font untuk judul */
+  margin-bottom: 20px; /* Jarak bawah untuk judul */
+  color: #e8e3be; /* Warna teks judul */
 }
 </style>
