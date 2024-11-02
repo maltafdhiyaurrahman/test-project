@@ -6,9 +6,15 @@
         <div class="letter-body">
           <p class="subtitle">Dengan hormat,</p>
           <p class="subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Happy anniversary, my love! I want to thank you for all the beautiful moments we've shared together. Every second we spend together becomes a treasured memory in my life.
+          </p>
+          <p class="subtitle">
+            I also want to apologize if there are mistakes or shortcomings I have made, and I'm sorry that I haven't been able to be what you want. I hope we can stay together forever, until the stars themselves decide to part us.
           </p>
           <div class="row justify-content-center">
+            <p class="title text-center">
+              How long until the next anniversary?
+            </p>
             <div class="col-auto" v-for="(unit, index) in timeUnits" :key="index">
               <div class="badge neutral-badge p-3 m-2">
                 <h4>{{ unit.value }}</h4>
@@ -18,7 +24,6 @@
           </div>
           <p class="subtitle">Hormat kami,</p>
           <p class="subtitle">Nama Pengirim</p>
-          <p class="subtitle">Alamat Pengirim</p>
         </div>
       </div>
     </div>

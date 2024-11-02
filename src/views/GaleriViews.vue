@@ -2,7 +2,7 @@
     <div class="home d-flex justify-content-center align-items-center">
 
       <div class="container mt-3 gallery-container mb-5">
-        <h4 class="text-center mb-4 title">Our Photo Gallery</h4>
+        <h4 class="text-center mb-4 title">Journey of Us</h4>
         <div class="row">
           <div class="col-md-4" v-for="(photo, index) in photos" :key="index">
             <div class="photo-card mb-4">
@@ -20,40 +20,47 @@
 </template>
 
 <script>
+import img1 from '../assets/img/img1.jpg'
+import img2 from '../assets/img/img2.jpg'
+import img3 from '../assets/img/img3.jpg'
+import img4 from '../assets/img/img4.jpg'
+import img5 from '../assets/img/img5.jpg'
+import img6 from '../assets/img/img6.jpg'
+
 export default {
   name: 'PhotoGallery',
   data() {
     return {
       photos: [
         {
-          src: 'https://via.placeholder.com/300x200',
+          src: img1,
           alt: 'Photo 1',
-          caption: 'Beautiful Sunset'
+          caption: 'Cake Date!'
         },
         {
-          src: 'https://via.placeholder.com/300x200',
+          src: img2,
           alt: 'Photo 2',
-          caption: 'Mountain Adventure'
+          caption: 'Graduation!'
         },
         {
-          src: 'https://via.placeholder.com/300x200',
+          src: img3,
           alt: 'Photo 3',
-          caption: 'Calm Beach'
+          caption: 'First photobox!'
         },
         {
-          src: 'https://via.placeholder.com/300x200',
+          src: img4,
           alt: 'Photo 4',
-          caption: 'Urban Exploration'
+          caption: 'Breaking the fast together!'
         },
         {
-          src: 'https://via.placeholder.com/300x200',
+          src: img5,
           alt: 'Photo 5',
-          caption: 'Forest Journey'
+          caption: 'First concert!'
         },
         {
-          src: 'https://via.placeholder.com/300x200',
+          src: img6,
           alt: 'Photo 6',
-          caption: 'Night Sky'
+          caption: 'Our last photobox:('
         }
       ]
     };
@@ -77,7 +84,7 @@ export default {
 /* Container styling */
 .gallery-container {
   padding: 4rem; /* Menambahkan padding di sekitar kontainer kuis */
-  background-color: #384B70; /* Warna latar belakang */
+  background-color: #25222b; /* Warna latar belakang */
   border-radius: 10px; /* Radius border untuk tampilan retro */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Bayangan untuk efek 3D */
 }

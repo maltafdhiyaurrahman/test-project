@@ -41,7 +41,7 @@ body {
 }
 
 .navbar {
-  background-color: #384B70; /* Warna latar belakang yang lebih retro */
+  background-color: #25222b; /* Warna latar belakang yang lebih retro */
   border: 2px solid #e15048; /* Border untuk kesan retro */
   border-radius: 10px;
   padding: 15px 25px; /* Padding lebih besar */

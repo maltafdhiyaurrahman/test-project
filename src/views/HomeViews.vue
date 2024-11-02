@@ -76,7 +76,7 @@ export default {
 .content {
   padding: 20px; /* Menambahkan padding untuk memberikan ruang di sekitar konten */
   border-radius: 10px; /* Radius border untuk tampilan lebih halus */
-  background-color: #384B70; /* Warna latar belakang yang lebih retro */
+  background-color: #25222b; /* Warna latar belakang yang lebih retro */
 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Bayangan untuk efek 3D */
 }
