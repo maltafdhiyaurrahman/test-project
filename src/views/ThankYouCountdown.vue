@@ -4,12 +4,15 @@
     <div class="container mt-3 mb-5">
       <div class="letter">
         <div class="letter-body">
-          <p class="subtitle">Dengan hormat,</p>
+          <p class="subtitle">Hey Love,</p>
           <p class="subtitle">
-            Happy anniversary, my love! I want to thank you for all the beautiful moments we've shared together. Every second we spend together becomes a treasured memory in my life.
-          </p>
-          <p class="subtitle">
-            I also want to apologize if there are mistakes or shortcomings I have made, and I'm sorry that I haven't been able to be what you want. I hope we can stay together forever, until the stars themselves decide to part us.
+            Happy anniversary! Can you believe we've survived three years together? I'm not saying it's been easy, but it's definitely been worth it.          
+          <!-- </p>
+          <p class="subtitle"> -->
+            Thank you for being patient with me and all my quirks. I know I can be a burden sometimes, but you always manage to make me feel loved and appreciated.     
+          <!-- </p>
+          <p class="subtitle"> -->
+            Here's to many more years of love, laughter, and adventures together! I hope we can stay together forever, until death do us part.
           </p>
           <div class="row justify-content-center">
             <p class="title text-center">
@@ -22,8 +25,8 @@
               </div>
             </div>
           </div>
-          <p class="subtitle">Hormat kami,</p>
-          <p class="subtitle">Nama Pengirim</p>
+          <p class="subtitle">See you</p>
+          <p class="subtitle">Love you</p>
         </div>
       </div>
     </div>
@@ -109,7 +112,7 @@ export default {
 }
 
 .letter-body {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .letter-footer {
